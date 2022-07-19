@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #container{
+            height: 300px;
+            width: 300px;
+            padding: 10px;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            /* background-color: blueviolet; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .c1 {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: white;
+            animation-name: labuk_zabuk;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-delay: 0.5s; 
+        }
+        .c2 {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: white;
+            animation-name: labuk_zabuk;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-delay: 0.2s; 
+        }
+        .c3 {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: white;
+            animation-name: labuk_zabuk;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-delay: 0.3s; 
+            animation-timing-function: linear;
+        }
+        @keyframes labuk_zabuk{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(0.5);
+                background-color: rgb(207, 171, 240);
+                /* opacity: 0.6; */
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">
+            <div class="c1" ></div>
+        </div>    
+        <div class="box">
+            <div class="c2"></div>
+        </div>    
+        <div class="box">
+            <div class="c1" ></div>
+        </div>    
+        <div class="box"> 
+            <div class="c2"></div>
+        </div>    
+        <div class="box">
+            <div class="c1" ></div>
+        </div>    
+        <div class="box">
+            <div class="c2"></div>
+        </div>    
+        <div class="box">
+            <div class="c3"></div>
+        </div>    
+        <div class="box">
+            <div class="c1" ></div>
+        </div>    
+        <div class="box">
+            <div class="c3"></div>
+        </div>   s 
+    </div>
+</body>
+</html>

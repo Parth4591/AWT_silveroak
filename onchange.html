@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onchange</title>
+</head>
+<body>
+    <label>Choose an ice cream flavor:
+        <select class="ice-cream" id="js" name="ice-cream" onchange="fun()">
+          <option value="">Select One</option>
+          <option value="chocolate">Chocolate</option>
+          <option value="sardine">Sardine</option>
+          <option value="vanilla">Vanilla</option>
+        </select>
+      </label>
+      
+      <div id="result"></div>
+      
+      <script>
+          function fun(){
+            var x = document.getElementById("js").value;
+            if( x == "Select One"){
+                document.getElementById("result").innerHTML = "Please select";
+            }
+            else {
+                document.getElementById("result").innerHTML = "You Like: " + x;
+            }
+          }
+      </script>
+</body>
+</html>

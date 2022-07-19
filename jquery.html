@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <style>
+    #tag{
+        margin: 10px;
+    }
+  </style>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+   <script>
+    $( function() {
+      var availableTags = [
+        "Anime",
+        "Baki",
+        "Bleach",
+        "Dororo",
+        "Dragon ball",
+        "Demon slayer",
+        "Fairy tail",
+        "Fullmetal ",
+        "Gintam",
+        "Goblin slayer",
+        "Hunter x hunter",
+        "Naruto",
+        "One piece"
+   
+      ];
+      $( "#tags" ).autocomplete({
+        source: availableTags
+      });
+    } );
+    </script>
+     <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+        </script>
+</head>
+<body>
+ 
+<div id="accordion">
+  <h3>Quote 1</h3>
+  <div>
+    <p>
+        “If you don’t take risks, you can’t create a future!”
+
+        Monkey D. Luffy 
+    </p>
+  </div>
+  <h3>quote 2</h3>
+  <div>
+    <p>
+        “We don’t have to know what tomorrow holds! That’s why we can live for everything we’re worth today!” 
+
+        – Natsu Dragneel 
+    </p>
+  </div>
+  <h3> quote 3</h3>
+  <div>
+    <p>
+        “If you really want to be strong… Stop caring about what your surrounding thinks of you!”
+
+        – Saitama 
+    </p>
+   
+  </div>
+  <h3>quote 4</h3>
+  <div>
+    <p>
+        “Hard work is worthless for those that don’t believe in themselves.”
+
+        – Naruto Uzumaki 
+    </p>
+ 
+  </div>
+</div>
+<div class="ui-widget" id="tag">
+    <label for="tags">Tags: </label>
+    <input id="tags">
+  </div>
+  <p>Date: <input type="text" id="datepicker"></p>
+ 
+</body>
+</html>

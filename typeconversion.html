@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+<body>
+    <h3>String to number</h3>
+    <p id="js"></p>
+    <script>
+        let x = "5";
+        let y = Number(x);
+        let z = + x;
+        document.getElementById("js").innerHTML= typeof x + "<br>"+typeof y+"<br>" + typeof z;
+    </script>
+    <h3>Number to String</h3>
+    <p id="js1"></p>
+    <script>
+        let a= 5;
+        let b= String(a);
+        let c = a.toString();
+        document.getElementById("js1").innerHTML= typeof a + "<br>"+typeof b+"<br>" + typeof c;
+
+    </script>
+</body>
+</html>
