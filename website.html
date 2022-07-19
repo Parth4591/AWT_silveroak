@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websit</title>
+    <style>
+        #navbar{
+            background-color: rgb(193, 241, 241);
+            border-radius: 5px;
+            height: 40px;
+            align-items: center;
+        }
+        #navbar ul{
+            margin-right: 20px;
+        }
+        #navbar ul li{
+            list-style: none;
+            float: right;
+            margin: 10px;
+            font-size: 20px;
+        }
+        #navbar li a{
+            text-decoration: none;
+        }
+        #navbar li a:hover{
+            text-decoration: none;
+            color: green;
+        }
+
+        #link{
+            border-radius: 3px ;
+            background-color: gainsboro;
+            width: 100px;
+            height: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        #link a{
+            text-decoration: none;
+            font-size: 30;
+            /* text-align: center; */
+        }
+        #link a:hover{
+            color: green;
+        }
+
+        #container{
+            display: flex;
+            width: 100%;
+            height: 340px;
+            /* border: 2px solid black; */
+            align-items: center;
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+        #container div{
+            height: 340px;
+            width: 33%;
+            /* border: 2px solid black; */
+            margin: 5px;
+        }
+        #container div img{
+            width: 100%;
+            overflow: auto;
+        }
+
+        .image1{
+            width: 60px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- This is header -->
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Help us</a></li>
+                <li><a href="#">About us</a><li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="link">
+        <a href="https://www.google.com/search?q=www.google.com&rlz=1C1RXQR_enIN946IN946&oq=www.goog&aqs=chrome.2.69i58j69i57j0i271j69i60j5i44l4.6486j0j4&sourceid=chrome&ie=UTF-8">
+            google
+        </a>
+    </div>
+
+    <div id="container">
+        <div>
+            <img src="./images/tree.jpg" alt="image of nature">
+        </div>
+        <div>
+            <img src="./images/dog.jpg" alt="image of dog" >
+        </div>
+        <div>
+            <img src="./images/cat.jpg" alt="image of cat" height="320px">
+        </div>
+    </div>
+
+    <div id="icon">
+
+            <a href=""><img class="image1" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-128.png"></a>
+
+            <a href="#"><img class="image1" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-128.png"></a>
+        
+            <a href="#"><img class="image1" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Pinterest_colored_svg-128.png"></a>
+
+            <a href="#"><img class="image1" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-128.png"></a>
+        
+    </div>
+</body>
+</html>

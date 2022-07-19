@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<title>Validation Demo</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			
+			var $Name = /^([a-zA-Z]{2,20})$/;
+			var $Password = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,12}$/;
+			var $EmailId = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+			var $ConNo = /^([0-9]{10})$/;
+			
+			$(document).ready(function(){
+
+				$("#Firstname").blur(function(){
+					$("#firstnameValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#firstnameValidation").html("Firstname is required!");
+					}
+					else{
+						if(!$(this).val().match($Name)){
+							$("#firstnameValidation").html("Invalid Firstname!");
+						}
+					}
+				});
+
+				$("#Firstname").keypress(function(e){
+					$("#firstnameValidation").empty();
+					var Flag=((e.which>=65 && e.which<=90) || (e.which>=97 && e.which<=121));
+					if(Flag==false){
+						$("#firstnameValidation").html("Invalid input!");
+					}
+					return Flag;
+				});
+
+                $("#Lastname").blur(function(){
+					$("#lastnameValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#lastnameValidation").html("Lastname is required!");
+					}
+					else{
+						if(!$(this).val().match($Name)){
+							$("#lastnameValidation").html("Invalid Lastname!");
+						}
+					}
+				});
+
+				$("#Lastname").keypress(function(e){
+					$("#lastnameValidation").empty();
+					var Flag=((e.which>=65 && e.which<=90) || (e.which>=97 && e.which<=121));
+					if(Flag==false){
+						$("#lastnameValidation").html("Invalid input!");
+					}
+					return Flag;
+				});
+
+				$("#Contact").blur(function(){
+					$("#contactValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#contactValidation").html("Contact No. is required!");
+					}
+					else{
+						if(!$(this).val().match($ConNo)){
+							$("#contactValidation").html("Invalid Contact No.!");
+						}
+					}
+				});
+
+				$("#Contact").keypress(function(e){
+					$("#contactValidation").empty();
+					var Flag=(e.which>=48 && e.which<=57);
+					if(Flag==false){
+						$("#contactValidation").html("Invalid Input!");
+					}
+					return Flag;
+				});
+
+
+				$("#Email").blur(function(){
+					$("#emailValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#emailValidation").html("Email Id is required!");
+					}
+					else{
+						if(!$(this).val().match($EmailId)){
+							$("#emailValidation").html("Invalid Email Id!");
+						}
+					}
+				});
+
+				$("#Password").blur(function(){
+					$("#passwordValidation").empty();
+					if($(this).val()=="" || $(this).val()==null){
+						$("#passwordValidation").html("Password is required!");
+					}
+					else{
+						if(!$(this).val().match($Password)){
+							$("#passwordValidation").html("Invalid Password!");
+						}
+					}
+				});
+            });
+				
+			
+		</script>
+		<style type="text/css">
+			small{color:red;}
+		</style>
+	</head>
+	<body>
+        <table align="center">
+            <tr>
+                <th>Firstname: </th>
+                <td>
+                    <input type="text" id="Firstname" autofocus placeholder="Firstname here..." maxlength="40"/><br>
+                    <small id="firstnameValidation"></small>
+                </td>
+            </tr>
+            
+            <tr>
+                <th>Lastname: </th>
+                <td>
+                    <input type="text" id="Lastname" autofocus placeholder="Lastname here..." maxlength="40"/><br/>
+                    <small id="lastnameValidation"></small>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Contact No.: </th>
+                <td>
+                    <input type="number" id="Contact" placeholder="Contact Number here..." maxlength="10"/><br/>
+                    <small id="contactValidation"></small>
+                </td>
+            </tr>
+            
+            <tr>
+                <th>Email Id: </th>
+                <td>
+                    <input type="email" id="Email" placeholder="Email here..." maxlength="40"/><br/>
+                    <small id="emailValidation"></small>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Password: </th>
+                <td>
+                    <input type="password" id="Password" placeholder="Password here..." maxlength="40"/><br/>
+		            <small id="passwordValidation"></small>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button id="BtnSubmit">Submit</button>
+                </td>
+            </tr>
+        </table>
+		
+		
+	</body>
+</html>

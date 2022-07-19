@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <title>Form</title>
+    <style type="text/css">
+        #CNAForm {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0px 0px 3px green;
+        }
+        
+        i.fa,
+        b {
+            color: rgb(211, 101, 70);
+        }
+        
+        /* body {
+            text-align: center;
+        } */
+        
+        .container {
+            width: 30%;
+            height: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid rgb(85, 230, 213);
+            border-radius: 5%;
+            border-collapse: rgb(31, 245, 209);
+        }
+        
+        .form-group {
+            background: none;
+            padding-top: 5px;
+            margin: 25px;
+            width: auto;
+        }
+        
+        .input-group:hover {
+            color: solid black;
+            font-weight: bold;
+        }
+        
+        .form-control:hover {
+            color: rgb(47, 0, 255);
+            font-weight: bold;
+        }
+    </style>
+
+<script>
+    $(document).ready(function(){
+        $("#loginForm").validate({
+            rules: {
+                fn: {required: true},
+                ln: {required: true},
+                em: {required: true,
+                    email: true},
+                contact: {required: true},
+                gen: {required: true},
+                pwd: {required: true}
+
+            },
+
+            messages: {
+                fn: {required: 'Enter FirstName'},
+                ln: {required: "Enter LastName"},
+                em: {required: "Enter Email",
+                    email: "Enter Correct Email"},
+                contact: {required: "Enter Contact Number"},
+                gen: {required: "Enter Gender"},
+                pwd: {required: "Enter Password"}
+            }
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4" id="CNAForm">
+                <h3 class="text-center"><i class="fa fa-users"></i> Create New Account<hr/></h3>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <b>Firstname:</b>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input id="Firstname" name="fn" type="text" maxlength="20" placeholder="Firstname..." >
+                        </div><br>
+                        <small id="FirstnameValidate" class="text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <b>Lastname:</b>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input id="Lastname" name="ln" type="text" maxlength="20" placeholder="Lastname..." >
+                        </div><br>
+                        <small id="LastnameValidate" class="text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <b>Contact No:</b>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                            <input id="ContactNo" name="contact" type="text" maxlength="10" placeholder="Contact No..." >
+                        </div><br>
+                        <small id="ContactNoValidate" class="text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <b>Gender:</b>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                    <i class="fa fa-male"></i> | <i class="fa fa-female"></i></span>
+                            <select  id="DDL_Gender" name="gen">
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <b>Email Id:</b>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input id="EmailId" name="em" type="text" maxlength="50" placeholder="Enter email id here.." >
+                        </div><br>
+                        <small id="EmailIdValidate" class="text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <b>Password:</b>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                            <input id="Password" name="pwd" type="password" maxlength="12" placeholder="Enter password here.." >
+                        </div><br>
+                        <small id="PasswordValidate" class="text-danger"></small>
+                    </div>
+                    <div class="form-group">
+                        <input id="Submit" type="submit" value="Submit" >    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
